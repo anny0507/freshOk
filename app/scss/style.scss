@@ -3,6 +3,82 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;    
+    padding: 17px 0 15px;
+    position: inherit;
+    z-index: 1;
+  }
+
+  &__top::after {
+    content: "";
+    background-color: $accent-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 55px;
+    z-index: -1;
+  }
+ 
+  &__link {
+    @extend %opensans-700;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $link-text;
+  }
+
+  &__bottom {
+    position: inherit;
+    padding: 30px 0;
+    z-index: 1;
+  }
+
+  &__bottom::after {
+    content: "";
+    background-color: $accent-green;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 110px;
+    z-index: -1;
+  }
+}
+
+.link__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link__item:not(:last-child) {
+  margin-right: 48px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__link {
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
 
 
 @import 'media';
