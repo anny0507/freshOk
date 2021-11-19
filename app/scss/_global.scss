@@ -4,8 +4,28 @@ body {
   line-height: 1.4;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

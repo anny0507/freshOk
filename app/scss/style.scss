@@ -14,14 +14,23 @@
 
   &__top::after {
     content: "";
-    background-color: $accent-black;
+    background-color: $dark-800;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     width: 100vw;
-    height: 55px;
+    height: 50px;
     z-index: -1;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
   }
  
   &__link {
@@ -30,20 +39,39 @@
     line-height: 1.8;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $link-text;
+    color: $white;
+    position: relative;
+    padding-left: 44px;
+  }
+
+  &__link--delivery::before {
+    content: url('../images/icons/icon-del-address.svg');
+    position: absolute;
+    left: 0;
+    top: -8px;
+  }
+
+  &__link--hotline::before {
+    content: url('../images/icons/icon-tel.svg');
+    position: absolute;
+    left: 0;
+    top: -8px;
   }
 
   &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: inherit;
-    padding: 30px 0;
+    padding: 22px 0;
     z-index: 1;
   }
 
   &__bottom::after {
     content: "";
-    background-color: $accent-green;
+    background-color: $green-900;
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0;
     right: 0;
     width: 100vw;
@@ -52,14 +80,6 @@
   }
 }
 
-.link__list {
-  display: flex;
-  justify-content: space-between;
-}
-
-.link__item:not(:last-child) {
-  margin-right: 48px;
-}
 
 .menu {
   &__list {
@@ -72,12 +92,142 @@
   }
 
   &__link {
+    @extend %opensans-700;
     font-size: 13px;
     line-height: 1.8;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #fff;
+    color: $white;
   }
+}
+
+.user-menu {
+  display: flex;
+  justify-content: space-between;
+
+  &__item:not(:last-child) {
+    margin-right: 30px
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: relative;
+  }
+
+  &__num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $red-900;
+    top: -8px;
+    left: -8px;
+    @extend %opensans-600;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+  }
+}
+
+
+.footer {
+  background-color: $dark-800;
+
+  &__top {
+    padding: 30px 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+
+  &__copy {
+    color: $white;
+  }
+}
+
+.subscription {
+
+  &__text {
+    line-height: 1;
+    color: $white;
+    margin-bottom: 18px;
+  }
+}
+
+.footer-menu {
+  column-count: 3;
+
+  &__item {
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    color: $white;
+  }
+}
+
+.address {
+
+  &__item {
+    margin-bottom: 18px;
+  }
+
+  &__connect {
+    color: $white;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: start;
+  }
+
+  &__box:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    transition: border 0.3s, opacity 0.5s;
+  }
+}
+
+.pay__list {
+  display: flex;
+  justify-content: start;
+}
+
+.pay__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.pay__link {
+  display: block;
+  width: 93px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  transition: border 0.3s, opacity 0.5s;
 }
 
 

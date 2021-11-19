@@ -19,6 +19,26 @@
 }
 
 @font-face {
+  font-family: 'OpenSans-Semibold', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  src: local('OpenSans-Semibold'),
+    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff');
+  font-display: swap3
+}
+
+@font-face {
+  font-family: 'OpenSans-Light', sans-serif;
+  font-weight: 300;
+  font-style: nor3al;
+  src: local('OpenSans-Ligh3'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Ruda-Regular', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -35,5 +55,15 @@
   src: local('Ruda-Bold'),
     url('../fonts/Ruda-Bold.woff2') format('woff2'),
     url('../fonts/Ruda-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Semibold', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  src: local('Ruda-Semibold'),
+    url('../fonts/Ruda-Semibold.woff2') format('woff2'),
+    url('../fonts/Ruda-Semibold.woff') format('woff');
   font-display: swap;
 }
