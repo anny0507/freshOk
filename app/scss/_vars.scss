@@ -1,6 +1,7 @@
-$dark-800: #31352B;
-$green-900: #63A60F;
-$red-900: #CF3E3B;
+$accent-dark: #31352B;
+$accent: #63A60F;
+$promotion: #CF3E3B;
+$bg: #F6F6F6;
 
 $title: #121212;
 $text: #505050;
@@ -32,9 +33,17 @@ $white: #fff;
   font-weight: 400;
 }
 
+%ruda-900 {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.3;
+}
+
 %ruda-700 {
   font-family: 'Ruda-Bold', sans-serif;
-  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.3;
 }
 
 %ruda-600 {

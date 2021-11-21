@@ -54,12 +54,16 @@
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="Логотип">
           </a>
+
           <form class="search" action="">
-            <button class="button button--white button--catalog" type="button">
+            <button class="button__catalog" type="button">
               Каталог продуктов
             </button>
 
-            <input type="text" class="search__text">
+            <input class="search__text" type="text" placeholder="Найти в магазине ..."><button class="search__button"
+              type="submit">
+              Поиск
+            </button>
           </form>
 
           <ul class="user-menu">
@@ -96,6 +100,161 @@
       </div>
     </header>
 
+    <main>
+      <section class="promo">
+        <div class="promo__list">
+          <div class="promo__item" style="background-image: url('images/slider/slide1.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Свежачок вам в хату
+                  <span class="promo__subtitle">
+                    Скидка -50%
+                  </span>
+                </h1>
+                <p class="promo__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo__item" style="background-image: url('images/slider/slide2.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Накрути себе томатов
+                  <span class="promo__subtitle">
+                    Акция: 3 кг по цене 1
+                  </span>
+                </h1>
+                <p class="promo__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo__item" style="background-image: url('images/slider/slide3.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Пусть остальные позеленеют от зависти
+                  <span class="promo__subtitle">
+                    Распродажа зелени
+                  </span>
+                </h1>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="info">
+        <div class="container">
+          <ul class="info__list">
+            <li class="info__item" style="background-image: url('images/icons/scooter.svg');">
+              <span class="info__text">
+                Бесплатная доставка
+              </span>
+              <span class="info_addition">
+                Для заказов на сумму от 500 ₽
+              </span>
+            </li>
+
+            <li class="info__item" style="background-image: url('images/icons/return-box.svg');">
+              <span class="info__text">
+                Возврат товара
+              </span>
+              <span class="info_addition">
+                Если товары были испорчены
+              </span>
+            </li>
+
+            <li class="info__item" style="background-image: url('images/icons/24-hours.svg');">
+              <span class="info__text">
+                Поддержка 24/7
+              </span>
+              <span class="info_addition">
+                Лучшие операторы
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <section class="portfolio section" id="portfolio">
+        <div class="container">
+          <h2 class="title">
+            Мои работы
+          </h2>
+          <ul class="portfolio__menu">
+            <li class="portfolio__item">
+              <button class="portfolio__btn" type="button" data-filter="all">
+                Все работы
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button class="portfolio__btn" type="button" data-filter=".lending">
+                Лендинги
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button class="portfolio__btn" type="button" data-filter=".corporative">
+                Корпоративные
+              </button>
+            </li>
+            <li class="portfolio__item">
+              <button class="portfolio__btn" type="button" data-filter=".commerce">
+                E-commerce
+              </button>
+            </li>
+          </ul>
+      
+          <ul class="portfolio__list">
+            <li class="portfolio__box mix corporative">
+              <img src="images/portfolio/img1.jpg" alt="Город на берегу реки">
+            </li>
+            <li class="portfolio__box mix lending">
+              <img src="images/portfolio/img2.jpg" alt="Лодки, идущие под мостом">
+            </li>
+            <li class="portfolio__box mix corporative">
+              <img src="images/portfolio/img3.jpg" alt="Металлический синий мост">
+            </li>
+            <li class="portfolio__box mix lending">
+              <img src="images/portfolio/img4.jpg" alt="Панорама города у реки">
+            </li>
+            <li class="portfolio__box mix commerce">
+              <img src="images/portfolio/img5.jpg" alt="Морской пляж">
+            </li>
+            <li class="portfolio__box mix commerce">
+              <img src="images/portfolio/img6.jpg" alt="Отвесная скала на фоне моря">
+            </li>
+          </ul>
+      
+          <button class="button" type="button">
+            Загрузить еще
+          </button>
+        </div>
+      </section>
+
+
+
+
+
+    </main>
+
+
 
     <footer class="footer">
       <div class="container">
@@ -108,8 +267,8 @@
               <p class="subscription__text">
                 Следите за нашими акциями
               </p>
-              <input class="subscription__mail" type="text" placeholder="email@email.com" required>
-              <button class="button">
+              <input class="subscription__mail" type="text" placeholder="email@email.com" required><button
+                class="subscription__button" type="submit">
                 подписаться
               </button>
             </form>
@@ -214,24 +373,18 @@
             © 2021 ФРЕШОК
           </span>
 
-          <ul class="pay__list">
+          <ul class="pay">
             <li class="pay__item">
-              <a class="pay__link" href="#"
-                style="background-image: url('images/icons/visa.svg')">
-                <span class="sr-only">
-                  Оплатить картой виза
-                </span>
+              <a class="pay__link" href="#">
+                <img src="images/icons/visa.svg" alt="Оплатить картой виза">
               </a>
             </li>
 
             <li class="pay__item">
-              <a class="pay__link" href="#"
-                style="background-image: url('images/icons/mastercard.svg')">
-                <span class="sr-only">
-                  Оплатить картой мастеркард
-                </span>
+              <a class="pay__link" href="#">
+                <img src="images/icons/mastercard.svg" alt="Оплатить картой мастеркард">
               </a>
-            </li>            
+            </li>
           </ul>
 
         </div>
