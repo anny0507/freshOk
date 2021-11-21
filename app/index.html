@@ -14,6 +14,9 @@
   <div class="wrapper">
 
     <header class="header">
+      <h1 class="sr-only">
+        Фрешок - интернет-магазин
+      </h1>
       <div class="container">
         <div class="header__top">
           <ul class="header__list">
@@ -193,57 +196,75 @@
         </div>
       </div>
 
-      <section class="portfolio section" id="portfolio">
+      <section class="section product" id="product">
         <div class="container">
           <h2 class="title">
-            Мои работы
+            Топовые товары
           </h2>
-          <ul class="portfolio__menu">
-            <li class="portfolio__item">
-              <button class="portfolio__btn" type="button" data-filter="all">
-                Все работы
+          <ul class="product__menu">
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="all">
+                Все товары
               </button>
             </li>
-            <li class="portfolio__item">
-              <button class="portfolio__btn" type="button" data-filter=".lending">
-                Лендинги
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="fruit">
+                Фрукты
               </button>
             </li>
-            <li class="portfolio__item">
-              <button class="portfolio__btn" type="button" data-filter=".corporative">
-                Корпоративные
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="vegetable">
+                Овощи
               </button>
             </li>
-            <li class="portfolio__item">
-              <button class="portfolio__btn" type="button" data-filter=".commerce">
-                E-commerce
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="drink">
+                Напитки
               </button>
             </li>
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="grocery">
+                Бакалея
+              </button>
+            </li>
+
+
+            
           </ul>
       
-          <ul class="portfolio__list">
-            <li class="portfolio__box mix corporative">
-              <img src="images/portfolio/img1.jpg" alt="Город на берегу реки">
+          <ul class="product__list">
+            <li class="product__box mix fruit">
+              <article class="card">
+                <span class="badge badge--novelty">
+                  Новинка
+                </span>
+                <span class="badge badge--sale">
+                  -50%
+                </span>
+                <img class="card__img" src="images/products/pineapple.jpg" alt="Ананас">
+                <h3 class="card__name">
+                  Ананас, 1кг
+                </h3>
+                <span class="card__old-price">
+                  1999 ₽
+                </span>
+                <span class="card__price">
+                  999 ₽
+                </span>
+
+                <a class="card__cart" href="#" style="background-image: url('images/icons/icon-cart.svg')">
+                  <span class="sr-only">
+                    Добавить в корзину
+                  </span>
+                </a>
+
+              </article>
             </li>
-            <li class="portfolio__box mix lending">
-              <img src="images/portfolio/img2.jpg" alt="Лодки, идущие под мостом">
-            </li>
-            <li class="portfolio__box mix corporative">
-              <img src="images/portfolio/img3.jpg" alt="Металлический синий мост">
-            </li>
-            <li class="portfolio__box mix lending">
-              <img src="images/portfolio/img4.jpg" alt="Панорама города у реки">
-            </li>
-            <li class="portfolio__box mix commerce">
-              <img src="images/portfolio/img5.jpg" alt="Морской пляж">
-            </li>
-            <li class="portfolio__box mix commerce">
-              <img src="images/portfolio/img6.jpg" alt="Отвесная скала на фоне моря">
-            </li>
+            
           </ul>
       
-          <button class="button" type="button">
-            Загрузить еще
+          <button class="btn btn--light" type="button">
+            Показать еще
           </button>
         </div>
       </section>

@@ -42,4 +42,50 @@ body {
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
+
+  &--light {
+    color: $accent;
+    background-color: $white;
+    border: 1px solid $accent;
+  }
+}
+
+.section {
+  padding: 72px 0px;
+}
+
+.title {
+  margin-bottom: 30px;
+  @extend %ruda-600;
+  color: $title;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge {
+  @extend %opensans-700;
+  font-size: 10px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: $white;
+  width: fit-content;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 6px;
+  padding: 3px 6px;
+
+  &--novelty {
+    background-color: $accent;
+  }
+
+  &--favorite {
+    background-color: $favorite;
+  }
+
+  &--sale {
+    background-color: $promotion;
+  }
 }
