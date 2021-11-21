@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('OpenSans-Regular'),
+       url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+       url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  font-weight: 700;
+  font-style: normal;
+  src: local('OpenSans-Bold'),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  font-weight: 600;
+  font-style: normal;
+  src: local('OpenSans-Semibold'),
+    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff');
+  font-display: swap3
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  font-weight: 300;
+  font-style: nor3al;
+  src: local('OpenSans-Ligh3'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Ruda-Regular'),
+    url('../fonts/Ruda-Regular.woff2') format('woff2'),
+    url('../fonts/Ruda-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Black';
+  font-weight: 900;
+  font-style: normal;
+  src: local('Ruda-Black'),
+    url('../fonts/Ruda-Black.woff2') format('woff2'),
+    url('../fonts/Ruda-Black.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Bold';
+  font-style: normal;
+  src: local('Ruda-Bold'),
+    url('../fonts/Ruda-Bold.woff2') format('woff2'),
+    url('../fonts/Ruda-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ruda-Semibold';
+  font-weight: 600;
+  font-style: normal;
+  src: local('Ruda-Semibold'),
+    url('../fonts/Ruda-Semibold.woff2') format('woff2'),
+    url('../fonts/Ruda-Semibold.woff') format('woff');
+  font-display: swap;
+}

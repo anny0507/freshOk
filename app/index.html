@@ -1,17 +1,422 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ФрешОк</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
+  <div class="wrapper">
 
+    <header class="header">
+      <h1 class="sr-only">
+        Фрешок - интернет-магазин
+      </h1>
+      <div class="container">
+        <div class="header__top">
+          <ul class="header__list">
+            <li class="header__item">
+              <a class="header__link header__link--delivery" href="#">
+                адрес и время доставки
+              </a>
+            </li>
+            <li class="header__item">
+              <a class="header__link header__link--hotline" href="#">
+                горячая линия 24/7
+              </a>
+            </li>
+          </ul>
+
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  доставка
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  о нас
+                </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">
+                  новости
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__bottom">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          </a>
+
+          <form class="search" action="">
+            <button class="button__catalog" type="button">
+              Каталог продуктов
+            </button>
+
+            <input class="search__text" type="text" placeholder="Найти в магазине ..."><button class="search__button"
+              type="submit">
+              Поиск
+            </button>
+          </form>
+
+          <ul class="user-menu">
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#" style="background-image: url('images/icons/icon-user.svg')">
+                <span class="sr-only">
+                  Перейти в свой профиль
+                </span>
+              </a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#" style="background-image: url('images/icons/icon-heart.svg')">
+                <span class="sr-only">
+                  Перейти к понравившимся товарам
+                </span>
+                <span class="user-menu__num">
+                  12
+                </span>
+              </a>
+            </li>
+            <li class="user-menu__item">
+              <a class="user-menu__link" href="#" style="background-image: url('images/icons/icon-cart.svg')">
+                <span class="sr-only">
+                  Перейти в корзину
+                </span>
+                <span class="user-menu__num">
+                  12
+                </span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="promo">
+        <div class="promo__list">
+          <div class="promo__item" style="background-image: url('images/slider/slide1.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Свежачок вам в хату
+                  <span class="promo__subtitle">
+                    Скидка -50%
+                  </span>
+                </h1>
+                <p class="promo__text">
+                  Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                </p>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo__item" style="background-image: url('images/slider/slide2.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Накрути себе томатов
+                  <span class="promo__subtitle">
+                    Акция: 3 кг по цене 1
+                  </span>
+                </h1>
+                <p class="promo__text">
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="promo__item" style="background-image: url('images/slider/slide3.jpg');">
+            <div class="container">
+              <div class="promo__content">
+                <h1 class="promo__title">
+                  Пусть остальные позеленеют от зависти
+                  <span class="promo__subtitle">
+                    Распродажа зелени
+                  </span>
+                </h1>
+                <a class="btn" href="#">
+                  Купить сейчас
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="info">
+        <div class="container">
+          <ul class="info__list">
+            <li class="info__item" style="background-image: url('images/icons/scooter.svg');">
+              <span class="info__text">
+                Бесплатная доставка
+              </span>
+              <span class="info_addition">
+                Для заказов на сумму от 500 ₽
+              </span>
+            </li>
+
+            <li class="info__item" style="background-image: url('images/icons/return-box.svg');">
+              <span class="info__text">
+                Возврат товара
+              </span>
+              <span class="info_addition">
+                Если товары были испорчены
+              </span>
+            </li>
+
+            <li class="info__item" style="background-image: url('images/icons/24-hours.svg');">
+              <span class="info__text">
+                Поддержка 24/7
+              </span>
+              <span class="info_addition">
+                Лучшие операторы
+              </span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <section class="section product" id="product">
+        <div class="container">
+          <h2 class="title">
+            Топовые товары
+          </h2>
+          <ul class="product__menu">
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="all">
+                Все товары
+              </button>
+            </li>
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="fruit">
+                Фрукты
+              </button>
+            </li>
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="vegetable">
+                Овощи
+              </button>
+            </li>
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="drink">
+                Напитки
+              </button>
+            </li>
+            <li class="product__item">
+              <button class="product__btn" type="button" data-filter="grocery">
+                Бакалея
+              </button>
+            </li>
+
+
+            
+          </ul>
+      
+          <ul class="product__list">
+            <li class="product__box mix fruit">
+              <article class="card">
+                <span class="badge badge--novelty">
+                  Новинка
+                </span>
+                <span class="badge badge--sale">
+                  -50%
+                </span>
+                <img class="card__img" src="images/products/pineapple.jpg" alt="Ананас">
+                <h3 class="card__name">
+                  Ананас, 1кг
+                </h3>
+                <span class="card__old-price">
+                  1999 ₽
+                </span>
+                <span class="card__price">
+                  999 ₽
+                </span>
+
+                <a class="card__cart" href="#" style="background-image: url('images/icons/icon-cart.svg')">
+                  <span class="sr-only">
+                    Добавить в корзину
+                  </span>
+                </a>
+
+              </article>
+            </li>
+            
+          </ul>
+      
+          <button class="btn btn--light" type="button">
+            Показать еще
+          </button>
+        </div>
+      </section>
+
+
+
+
+
+    </main>
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a class="logo logo--footer" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          </a>
+          <div class="footer__content">
+            <form class="subscription" action="">
+              <p class="subscription__text">
+                Следите за нашими акциями
+              </p>
+              <input class="subscription__mail" type="text" placeholder="email@email.com" required><button
+                class="subscription__button" type="submit">
+                подписаться
+              </button>
+            </form>
+
+            <ul class="footer-menu">
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  О нас
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Контакты
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Публичная оферта
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Оплата и доставка
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Вакансии
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Акции
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#">
+                  Новости
+                </a>
+              </li>
+            </ul>
+
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a class="address__connect" href="tel:+7907288365">
+                    Горячая линия+7 907 288 365
+                  </a>
+                </li>
+                <li class="address__item">
+                  <a class="address__connect" href="#">
+                    Санкт-Петербург, ул. Ленина, 1
+                  </a>
+                </li>
+              </ul>
+
+              <ul class="address__social">
+                <li class="address__box">
+                  <a class="address__link" href="https://www.facebook.com"
+                    style="background-image: url('images/icons/facebook.svg')">
+                    <span class="sr-only">
+                      Перейти в фэйсбук
+                    </span>
+                  </a>
+                </li>
+                <li class="address__box">
+                  <a class="address__link" href="https://www.youtube.com"
+                    style="background-image: url('images/icons/youtube.svg')">
+                    <span class="sr-only">
+                      Перейти в youtube
+                    </span>
+                  </a>
+                </li>
+                <li class="address__box">
+                  <a class="address__link" href="https://t.me"
+                    style="background-image: url('images/icons/telegram.svg')">
+                    <span class="sr-only">
+                      Перейти в телеграм
+                    </span>
+                  </a>
+                </li>
+                <li class="address__box">
+                  <a class="address__link" href="https://www.instagram.com"
+                    style="background-image: url('images/icons/instagram.svg')">
+                    <span class="sr-only">
+                      Перейти в инстаграм
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span class="footer__copy">
+            © 2021 ФРЕШОК
+          </span>
+
+          <ul class="pay">
+            <li class="pay__item">
+              <a class="pay__link" href="#">
+                <img src="images/icons/visa.svg" alt="Оплатить картой виза">
+              </a>
+            </li>
+
+            <li class="pay__item">
+              <a class="pay__link" href="#">
+                <img src="images/icons/mastercard.svg" alt="Оплатить картой мастеркард">
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
 
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
