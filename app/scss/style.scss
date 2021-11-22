@@ -329,19 +329,25 @@
   &__box {
     border: 1px solid rgba(17, 17, 17, 0.2);
     border-radius: 6px;
-    padding: 6px;
+    text-align: left;
+    padding: 12px 1px 18px;
   }
 
 }
 
 .card {
+  position: relative;
 
   &__name {
     @extend %opensans-600;
     font-size: inherit;
     letter-spacing: 0.03em;
     text-align: left;
-    margin-bottom: 50px;
+    margin: 10px 18px 50px;
+  }
+
+  &__img {
+    margin-bottom: 10px;
   }
 
   &__cart {
