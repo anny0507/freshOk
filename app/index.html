@@ -208,28 +208,25 @@
               </button>
             </li>
             <li class="product__item">
-              <button class="product__btn" type="button" data-filter="fruit">
+              <button class="product__btn" type="button" data-filter=".fruit">
                 Фрукты
               </button>
             </li>
             <li class="product__item">
-              <button class="product__btn" type="button" data-filter="vegetable">
+              <button class="product__btn" type="button" data-filter=".vegetable">
                 Овощи
               </button>
             </li>
             <li class="product__item">
-              <button class="product__btn" type="button" data-filter="drink">
+              <button class="product__btn" type="button" data-filter=".drink">
                 Напитки
               </button>
             </li>
             <li class="product__item">
-              <button class="product__btn" type="button" data-filter="grocery">
+              <button class="product__btn" type="button" data-filter=".grocery">
                 Бакалея
               </button>
-            </li>
-
-
-            
+            </li>            
           </ul>
       
           <ul class="product__list">
@@ -245,19 +242,186 @@
                 <h3 class="card__name">
                   Ананас, 1кг
                 </h3>
-                <span class="card__old-price">
+                <span class="price price--old">
                   1999 ₽
                 </span>
-                <span class="card__price">
+                <span class="price">
                   999 ₽
                 </span>
 
-                <a class="card__cart" href="#" style="background-image: url('images/icons/icon-cart.svg')">
-                  <span class="sr-only">
-                    Добавить в корзину
-                  </span>
-                </a>
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+                
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
 
+              </article>              
+            </li>
+
+            <li class="product__box mix fruit">
+              <article class="card">
+                <img class="card__img" src="images/products/lemon.jpg" alt="Лимон">
+                <h3 class="card__name">
+                  Лимон, 1кг
+                </h3>
+                <span class="price">
+                  199 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix fruit">
+              <article class="card">
+                <span class="badge badge--favorite">
+                  Хит
+                </span>
+                <img class="card__img" src="images/products/dragon_fruit.jpg" alt="Питахайя">
+                <h3 class="card__name">
+                  Питахайя красная с белой мякотью, 1шт
+                </h3>
+                <span class="price">
+                  1019 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix grocery">
+              <article class="card">
+                <img class="card__img" src="images/products/ketchup.jpg" alt="Кетчуп томатный детский">
+                <h3 class="card__name">
+                  Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт
+                </h3>
+                <span class="price">
+                  600 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix vegetable">
+              <article class="card">
+                <span class="badge badge--favorite">
+                  Хит
+                </span>
+                <img class="card__img" src="images/products/carrot.jpg" alt="Морковь молодая">
+                <h3 class="card__name">
+                  Морковь молодая с бабушкиной грядки, 1кг
+                </h3>
+                <span class="price">
+                  49 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix drink">
+              <article class="card">
+                <span class="badge badge--sale">
+                  -30%
+                </span>
+                <img class="card__img" src="images/products/juice.jpg" alt="Напиток">
+                <h3 class="card__name">
+                  Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                </h3>
+                <span class="price price--old">
+                  299 ₽
+                </span>
+                <span class="price">
+                  199 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix drink">
+              <article class="card">
+                <span class="badge badge--novelty">
+                  Новинка
+                </span>
+                <img class="card__img" src="images/products/coffee.jpg" alt="Кофе">
+                <h3 class="card__name">
+                  Кофе с коноплей органический Caffé Salomoni 250г
+                </h3>
+                <span class="price">
+                  877 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
+              </article>
+            </li>
+
+            <li class="product__box mix vegetable">
+              <article class="card">
+                <span class="badge badge--novelty">
+                  Новинка
+                </span>
+                <img class="card__img" src="images/products/paprik.jpg" alt="Перец">
+                <h3 class="card__name">
+                  Перец оранжевый, 1кг
+                </h3>
+                <span class="price">
+                  349 ₽
+                </span>
+            
+                <button class="card__btn card__btn--favorite">
+                  <img src="images/icons/favorite.svg" alt="Добавить в избранное">
+                </button>
+            
+                <button class="card__btn card__btn--cart">
+                  <img src="images/icons/icon-cart.svg" alt="Добавить в корзину">
+                </button>
+            
               </article>
             </li>
             
@@ -268,10 +432,6 @@
           </button>
         </div>
       </section>
-
-
-
-
 
     </main>
 
