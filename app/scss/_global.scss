@@ -3,6 +3,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: $text;
+  background-color: $white;
 }
 
 .wrapper {
@@ -42,9 +43,10 @@ body {
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.2s, box-shadow 0.3s;
 
   &:hover {
-    background: #4D810C;
+    background-color: #4D810C;
   }
 
   &:focus {
@@ -130,7 +132,7 @@ body {
   &--old {
     display: inline-block;
     color: $decor;
-    
+
     &:before {
       content: "";
       border-bottom: 1px solid $decor;
@@ -154,11 +156,51 @@ body {
   padding: 8px;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.2s, box-shadow 0.3s;
+
+  &:hover {
+    background: #4D810C;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px $active;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
 
   &--favorite {
+    width: 44px;
+    height: 44px;
     top: 4px;
     right: 10px;
-    padding: 0;
-    background-color: transparent;
+    padding: 9px 6px 6px 6px;
+    background-color: $white;
+
+    &:hover {
+      background-color: $white;
+
+      path {
+        fill: #FFB800;
+      }
+    }
+
+    &:active {
+      path {
+        fill: #FFB800;
+      }
+
+      opacity: 0.5;
+      box-shadow: none;
+    }
+
+    &:focus {
+      path {
+        fill: #C1C1C1;
+      }
+    }
+
   }
 }

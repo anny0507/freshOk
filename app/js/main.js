@@ -1,7 +1,9 @@
 $(function () {
 
   $('.promo__list').slick({
-    infinite: false
+    infinite: false,
+    adaptiveHeight: true
+
   });
 
   $('.button__catalog').on('click', function () {

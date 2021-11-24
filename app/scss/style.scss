@@ -1,6 +1,6 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'libs';
 @import 'global';
 
@@ -121,6 +121,7 @@
 
 .search {
   width: 68%;
+  margin-left: 18px;
 
   &__text {
     @extend %opensans-400;
@@ -129,21 +130,11 @@
     padding: 15px 51px;
     margin: 0;
     border-radius: 6px 0px 0px 6px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      background-image: url('../images/icons/icon-search.svg');
-      background-repeat: no-repeat;
-      background-position: top left;
-      background-size: cover;
-      width: 20px;
-      height: 20px;
-    }
-  }
+    background-image: url('../images/icons/icon-search.svg');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: inherit;
+}
 
   &__button {
     @extend %opensans-600;
@@ -231,7 +222,6 @@
     background-color: transparent;
     opacity: 1;
     border-radius: 3px;
-    z-index: 1;
 
     &::after {
       content: "";
@@ -240,11 +230,7 @@
       height: 32px;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      background-repeat: no-repeat;
-      background-position: top left;
-      background-size: contain;
-      z-index: 10;
+      transform: translate(-50%, -50%);      
     }
 
     &:not(:last-child) {
@@ -266,24 +252,12 @@
     }
   }
 
-  &__item--user::after {
-    background-image: url("../images/icons/icon-user.svg");
-  }
-
-  &__item--heart::after {
-    background-image: url("../images/icons/icon-heart.svg");
-  }
-
-  &__item--cart::after {
-    background-image: url("../images/icons/icon-cart.svg");
-  }
-
-
-
   &__link {
     display: block;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__num {
@@ -293,8 +267,8 @@
     border-radius: 50%;
     background-color: $white;
     color: $promotion;
-    top: 0px;
-    left: 0px;
+    top: -8px;
+    left: -8px;
     @extend %opensans-600;
     font-size: 10px;
     line-height: 1.8;
@@ -306,9 +280,13 @@
 
   &__list {
 
+    & .slick-track {
+      display: flex;
+    }
+
     & .slick-arrow {
       position: absolute;
-      top: 43%;
+      top: 45%;
       z-index: 10;
       font-size: 0;
       width: 60px;
@@ -473,8 +451,15 @@
 
 }
 
-.card {
+.product-card {
   position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .product-card__link {
+      transform: translate(-50%, -50%);
+    }
+  }
 
   &__name {
     @extend %opensans-600;
@@ -497,6 +482,20 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: inherit;
+  }
+
+  &__link {
+    position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    width: 48px;
+    height: 48px;
+    background-color: $white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(500%);
+    transition: transform 0.3s;
   }
 
 }
@@ -611,10 +610,23 @@
     display: block;
     width: 32px;
     height: 32px;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: contain;
+    text-align: center;
+    border-radius: 3px;
     transition: border 0.3s, opacity 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      path {
+        fill: $active;
+      }      
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 3px $active;
+    }
   }
 }
 
