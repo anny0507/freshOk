@@ -34,9 +34,11 @@
   }
 
   &__link {
-    @extend %opensans-700;
+    font-family: 'Open Sans',  sans-serif;
+    font-weight: 700;
     font-size: 13px;
     line-height: 1.8;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
     position: relative;
@@ -101,14 +103,15 @@
 }
 
 .button__catalog {
-  @extend %opensans-600;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   letter-spacing: 0.03em;
   color: $accent-900;
   background-color: $white;
   border-radius: 6px;
   padding: 15px 38px 15px 60px;
   position: relative;
-  margin: 0 20px 0 30px;
+  margin: 0 20px;
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -161,20 +164,18 @@
   }
 
   &__text {
-    @extend %opensans-400;
+    font-family: 'Open Sans', sans-serif;
+    color: $dark-800;
     letter-spacing: 0.03em;
-    width: 415px;
-    padding: 15px 51px;
+    width: 68%;
+    padding: 15px 55px;
     margin: 0;
     border-radius: 6px 0px 0px 6px;
-    /* background-image: url('../images/icons/icon-search.svg');
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: inherit; */
   }
 
   &__button {
-    @extend %opensans-600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $white;
@@ -214,8 +215,6 @@
     position: relative;
     background-color: transparent;
     opacity: 1;
-    border-radius: 3px;
-    cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
 
     &:hover {
@@ -250,7 +249,8 @@
     color: $red-900;
     top: 2px;
     left: 2px;
-    @extend %opensans-600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 10px;
     line-height: 1.8;
     text-align: center;
@@ -334,7 +334,10 @@
   }
 
   &__title {
-    @extend %ruda-900;
+    font-family: 'Ruda', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.3;
     text-transform: uppercase;
     color: $dark-500;
     max-width: 70%;
@@ -346,7 +349,7 @@
   }
 
   &__text {
-    @extend %opensans-400;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: $dark-500;
     margin-bottom: 32px;
@@ -368,12 +371,13 @@
     background-position: top left;
     background-size: inherit;
     max-width: 265px;
-    margin-right: 65px;
+    margin-right: 60px;
   }
 
   &__text {
     display: block;
-    @extend %opensans-600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     letter-spacing: 0em;
     margin-bottom: 7px;
@@ -382,7 +386,7 @@
 
   &__addition {
     display: block;
-    @extend %opensans-400;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0em;
   }
 }
@@ -394,7 +398,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 60px;
   }
 
   &__box {
@@ -417,11 +421,12 @@
 
 
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 25px;
   }
 
   &__btn {
-    @extend %opensans-700;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     font-size: 15px;
     color: $dark-500;
     text-transform: uppercase;
@@ -460,9 +465,10 @@
     position: relative;
     height: 45px;
   }
-  
+
   &__name {
-    @extend %opensans-600;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: inherit;
     letter-spacing: 0.03em;
     text-align: left;
@@ -476,7 +482,7 @@
   }
 
   &__img {
-    margin-bottom: 20px;
+    margin-bottom: 6px;
   }
 
   &__bottom {
@@ -510,22 +516,19 @@
 
 .footer {
   background-color: $dark-800;
-
-  &__top {
-    padding-top: 30px;
-    border-bottom: 1px solid $white;
-  }
+  padding-top: 30px;
 
   &__content {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    border-bottom: 1px solid $white;
+    padding: 30px 0;
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
-    padding: 24px 0;
+    padding: 28px 0;
   }
 
   &__copy {
@@ -533,8 +536,8 @@
   }
 }
 
-.subscription {
-  width: 32%;
+.subscribe {
+  width: 34%;
 
   &__text {
     line-height: 1;
@@ -543,9 +546,10 @@
   }
 
   &__mail {
-    @extend %opensans-400;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1;
-    width: 180px;
+    letter-spacing: normal;
+    width: 42%;
     height: 40px;
     padding: 12px;
     margin: 0;
@@ -553,7 +557,8 @@
   }
 
   &__button {
-    @extend %opensans-700;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
     color: $white;
@@ -580,7 +585,7 @@
 
 .footer-menu {
   column-count: 3;
-  width: 45%;
+  width: 47%;
 
   &__item {
     margin-bottom: 18px;
@@ -607,7 +612,7 @@
   }
 
   &__box:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &__link {
@@ -616,14 +621,14 @@
     height: 32px;
     text-align: center;
     border-radius: 3px;
-    transition: border 0.3s, opacity 0.5s;
+    transition: box-shadow 0.3s, opacity 0.2s;
 
     &:hover {
       opacity: 0.7;
     }
 
     &:active {
-      path {
+      .address__icon {
         fill: $accent-200;
       }
     }
@@ -631,6 +636,12 @@
     &:focus {
       box-shadow: 0px 0px 0px 3px $accent-200;
     }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: $white;
   }
 }
 
