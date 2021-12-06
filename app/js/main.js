@@ -8,10 +8,31 @@ $(function () {
 
   });
 
+  $('.brend').slick({
+    arrows: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    variableWidth: true
+  });
+
   $('.button__catalog').on('click', function () {
     $('.button__catalog').toggleClass('active');
   })
   
-    var mixer = mixitup('.product__list');
+
+  var filterProduct = document.querySelector('[data-ref="filter-product"]');
+  var filterPromo = document.querySelector('[data-ref="filter-promo"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(filterProduct, config);
+  var mixer2 = mixitup(filterPromo, config);
+
+  /* var mixer = mixitup('.product__list'); */
   
 });
