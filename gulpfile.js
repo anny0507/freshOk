@@ -6,6 +6,7 @@ const uglify       = require('gulp-uglify');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
 const browserSync  = require('browser-sync').create();
+const svgSprite    = require('gulp-svg-sprite');
 
 function browsersync() {
   browserSync.init({
@@ -61,10 +62,40 @@ function images() {
   .pipe(dest('dist/images'))  
 }
 
+function svgSprites() {
+  return src('app/images/icons/*.svg') 
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+          },
+        },
+      })
+    )
+    .pipe(dest('app/images')); 
+}
+
+function svgBrends() {
+  return src('app/images/brends/*.svg')
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: '../brends.svg', // указываем имя файла спрайта и путь
+          },
+        },
+      })
+    )
+    .pipe(dest('app/images'));
+}
+
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
+  watch(['app/images/icons/*.svg'], svgSprites);
+  watch(['app/images/brends/*.svg'], svgBrends);
 }
 
 function build() {
@@ -87,7 +118,9 @@ exports.styles      = styles;
 exports.scripts     = scripts;
 exports.browsersync = browsersync;
 exports.images      = images;
+exports.svgSprites  = svgBrends;
+exports.svgBrends = svgBrends;
 exports.cleanDist   = cleanDist;
 exports.build       = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching)
+exports.default = parallel(svgSprites, svgBrends, styles, scripts, browsersync, watching)
