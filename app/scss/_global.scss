@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  
+
   color: $dark-500;
   background-color: $white;
   display: flex;
@@ -114,7 +114,13 @@ button {
 
   &--gray:hover {
     fill: #FFB800;
-  }  
+  }
+
+  &--star {
+    fill: #FFB800;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .section {
@@ -133,32 +139,42 @@ button {
 }
 
 .badge {
-  display: block;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  color: $white;
-  width: fit-content;
-  border-radius: 6px;
-  margin-left: 10px;
-  margin-bottom: 4px;
-  padding: 3px 6px;
-  z-index: 2;
 
-  &--novelty {
-    background-color: $accent-900;
+  &__list {
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    z-index: 2;
   }
 
-  &--favorite {
-    background-color: $orange-900;
-  }
+  &__label {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $white;
+    width: fit-content;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    padding: 3px 6px;
 
-  &--sale {
-    background-color: $red-900;
+
+    &--novelty {
+      background-color: $accent-900;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+
+    &--sale {
+      background-color: $red-900;
+    }
   }
 }
 
@@ -194,4 +210,3 @@ button {
     line-height: 1;
   }
 }
-
