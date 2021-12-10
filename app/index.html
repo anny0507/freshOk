@@ -14,14 +14,10 @@
 
 <body>
 
-  <h1 class="sr-only">
-    Фрешок - интернет-магазин продуктов
-  </h1>
-
   <header class="header">
 
     <div class="container">
-      <nav class="nav">
+      <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link menu__link--delivery" href="#">
@@ -55,7 +51,7 @@
             <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="60">
           </a>
 
-          <button class="button__catalog" type="button">
+          <button class="menu__catalog" type="button">
             Каталог продуктов
           </button>
 
@@ -64,18 +60,20 @@
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
 
-            <label class="sr-only" for="search__text">
-              Введите текст для поиска
+            <label>
+              <span class="sr-only">
+                Введите текст для поиска
+              </span>
+              <input class="search__text" type="search" name="searchText" placeholder="Найти в магазине ..."
+                required><button class="search__button" type="submit">
+                Поиск
+              </button>
             </label>
-            <input class="search__text" type="search" id="search__text" name="search__text"
-              placeholder="Найти в магазине ..." required><button class="search__button" type="submit">
-              Поиск
-            </button>
           </form>
 
           <ul class="user-menu">
             <li class="user-menu__item">
-              <button class="user-menu__btn" type="submit">
+              <button class="user-menu__btn" type="button">
                 <span class="sr-only">
                   Перейти в свой профиль
                 </span>
@@ -85,7 +83,7 @@
               </button>
             </li>
             <li class="user-menu__item">
-              <button class="user-menu__btn" type="submit">
+              <button class="user-menu__btn" type="button">
                 <span class="sr-only">
                   Перейти к понравившимся товарам
                 </span>
@@ -98,7 +96,7 @@
               </button>
             </li>
             <li class="user-menu__item">
-              <button class="user-menu__btn" type="submit">
+              <button class="user-menu__btn" type="button">
                 <span class="sr-only">
                   Перейти в корзину
                 </span>
@@ -118,6 +116,10 @@
   </header>
 
   <main class="main">
+    <h1 class="sr-only">
+      Фрешок - интернет-магазин продуктов - Главная страница
+    </h1>
+
     <section class="hot">
       <h2 class="sr-only">Горячие предложения</h2>
       <div class="hot__list">
@@ -213,7 +215,7 @@
         <h2 class="title">
           Топовые товары
         </h2>
-        <ul class="filter">
+        <ul class="product__filter filter">
           <li class="filter__item">
             <button class="filter__btn" type="button" data-filter="all">
               Все товары
@@ -557,43 +559,48 @@
     </section>
 
     <div class="banner">
-      <ul class="banner__list container">
-        <li class="banner__item" style="background-image: url('images/banners/banner1.jpg');" width="630" height="300">
-          <span class="banner__text">
-            свежайшие фрукты
-          </span>
-          <span class="banner__title">
-            начни фруктовое лето всего от 99 ₽
-          </span>
-          <a class="banner__link" href="#">
-            перейти к покупкам
-          </a>
-        </li>
+      <div class="container">
+        <ul class="banner__list">
+          <li class="banner__item" style="background-image: url('images/banners/banner1.jpg');" width="630"
+            height="300">
+            <span class="banner__text">
+              свежайшие фрукты
+            </span>
+            <span class="banner__title">
+              начни фруктовое лето всего от 99 ₽
+            </span>
+            <a class="banner__link" href="#">
+              перейти к покупкам
+            </a>
+          </li>
 
-        <li class="banner__item" style="background-image: url('images/banners/banner2.jpg');" width="300" height="300">
-          <span class="banner__text">
-            сезонная распродажа
-          </span>
-          <span class="banner__title">
-            овощепад до -50%
-          </span>
-          <a class="banner__link" href="#">
-            перейти к покупкам
-          </a>
-        </li>
+          <li class="banner__item" style="background-image: url('images/banners/banner2.jpg');" width="300"
+            height="300">
+            <span class="banner__text">
+              сезонная распродажа
+            </span>
+            <span class="banner__title">
+              овощепад до -50%
+            </span>
+            <a class="banner__link" href="#">
+              перейти к покупкам
+            </a>
+          </li>
 
-        <li class="banner__item" style="background-image: url('images/banners/banner3.jpg');" width="300" height="300">
-          <span class="banner__text">
-            ням-ням
-          </span>
-          <span class="banner__title">
-            свежий хлебчик
-          </span>
-          <a class="banner__link" href="#">
-            перейти к покупкам
-          </a>
-        </li>
-      </ul>
+          <li class="banner__item" style="background-image: url('images/banners/banner3.jpg');" width="300"
+            height="300">
+            <span class="banner__text">
+              ням-ням
+            </span>
+            <span class="banner__title">
+              свежий хлебчик
+            </span>
+            <a class="banner__link" href="#">
+              перейти к покупкам
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <section class="section promo" id="promo" data-ref="filter-promo">
@@ -660,7 +667,8 @@
                   Новинка
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/coffee.jpg" alt="Ананас" width="120" height="100">
+              <img class="card__img card__img--mini" src="images/products/coffee.jpg" alt="Ананас" width="120"
+                height="100">
               <h3 class="card__name card__name--mini">
                 Кофе с коноплей органический Caffé Salomoni 250г
               </h3>
@@ -691,7 +699,8 @@
                   Новинка
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/strawberry-small.jpg" alt="Клубника" width="120" height="100">
+              <img class="card__img card__img--mini" src="images/products/strawberry-small.jpg" alt="Клубника"
+                width="120" height="100">
               <h3 class="card__name card__name--mini">
                 Клубника, 1 кг
               </h3>
@@ -722,7 +731,8 @@
                   Новинка
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/mango-small.jpg" alt="Манго" width="100" height="100">
+              <img class="card__img card__img--mini" src="images/products/mango-small.jpg" alt="Манго" width="100"
+                height="100">
               <h3 class="card__name card__name--mini">
                 Манго, 1 шт
               </h3>
@@ -753,7 +763,8 @@
                   Новинка
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/salmon-small.jpg" alt="Лосось" width="100" height="100">
+              <img class="card__img card__img--mini" src="images/products/salmon-small.jpg" alt="Лосось" width="100"
+                height="100">
               <h3 class="card__name card__name--mini">
                 Лосось, 1кг
               </h3>
@@ -784,7 +795,8 @@
                   Хит
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/veg-juice-small.jpg" alt="Сок Granini овощной" width="120" height="100">
+              <img class="card__img card__img--mini" src="images/products/veg-juice-small.jpg" alt="Сок Granini овощной"
+                width="120" height="100">
               <h3 class="card__name card__name--mini">
                 Сок Granini овощной 100%, 0.5л
               </h3>
@@ -815,7 +827,8 @@
                   Хит
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/basket-small.jpg" alt="Фруктовая корзина" width="120" height="100">
+              <img class="card__img card__img--mini" src="images/products/basket-small.jpg" alt="Фруктовая корзина"
+                width="120" height="100">
               <h3 class="card__name card__name--mini">
                 Фруктовая корзина, 1 шт
               </h3>
@@ -846,7 +859,8 @@
                   Хит
                 </li>
               </ul>
-              <img class="card__img card__img--mini" src="images/products/meat-small.jpg" alt="Свинина мякоть" width="120" height="100">
+              <img class="card__img card__img--mini" src="images/products/meat-small.jpg" alt="Свинина мякоть"
+                width="120" height="100">
               <h3 class="card__name card__name--mini">
                 Свинина мякоть, 1 кг
               </h3>
@@ -878,39 +892,31 @@
       </div>
     </section>
 
-    <ul class="section brend container">
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#sprite"></use>
-        </svg>
-      </li>
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#dr-pepper"></use>
-        </svg>
-      </li>
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#coca-cola"></use>
-        </svg>
-      </li>
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#pepsi"></use>
-        </svg>
-      </li>
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#redbull"></use>
-        </svg>
-      </li>
-      <li class="brend__item">
-        <svg class="brend__img">
-          <use xlink:href="images/brends.svg#fanta"></use>
-        </svg>
-      </li>
+    <div class="brend">
+      <div class="container">
+        <ul class="brend__list">
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/sprite.png" alt="Логотип Sprite" width="80" height="33">
+          </li>
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/dr-pepper.png" alt="Логотип Sprite" width="80" height="57">
+          </li>
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/coca-cola.png" alt="Логотип Sprite" width="80" height="26">
+          </li>
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/pepsi.png" alt="Логотип Sprite" width="80" height="31">
+          </li>
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/redbull.png" alt="Логотип Sprite" width="80" height="48">
+          </li>
+          <li class="brend__item">
+            <img class="brend__img" src="images/brends/fanta.png" alt="Логотип Sprite" width="80" height="59">
+          </li>
 
-    </ul>
+        </ul>
+      </div>
+    </div>
 
     <section class="news" id="news">
       <div class="container">
@@ -975,8 +981,6 @@
 
   </main>
 
-
-
   <footer class="footer">
     <div class="container">
 
@@ -989,53 +993,55 @@
           <p class="subscribe__text">
             Следите за нашими акциями
           </p>
-          <label class="sr-only" for="subscribe__mail">
-            Введите адрес для оформления подписки
+          <label>
+            <span class="sr-only">
+              Введите адрес для оформления подписки
+            </span>
+            <input class="subscribe__mail" type="email" id="subscribe__mail" name="subscribe__mail"
+              placeholder="email@email.com" required><button class="subscribe__button" type="submit">
+              подписаться
+            </button>
           </label>
-          <input class="subscribe__mail" type="email" id="subscribe__mail" name="subscribe__mail"
-            placeholder="email@email.com" required><button class="subscribe__button" type="submit">
-            подписаться
-          </button>
         </form>
 
-        <nav class="nav">
-          <ul class="footer-menu">
-            <li class="footer-menu__item">
+        <nav class="menu">
+          <ul class="menu__list menu__list--footer">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 О нас
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Контакты
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Публичная оферта
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Оплата и доставка
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Вакансии
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Акции
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Отзывы
               </a>
             </li>
-            <li class="footer-menu__item">
+            <li class="menu__item menu__item--footer">
               <a class="menu__link menu__link--footer" href="#">
                 Новости
               </a>
