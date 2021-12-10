@@ -1,9 +1,8 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-
   color: $dark-500;
   background-color: $white;
   display: flex;
@@ -38,7 +37,6 @@ button {
 }
 
 .btn {
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   line-height: 1.3;
   letter-spacing: 0.03em;
@@ -70,7 +68,7 @@ button {
     border: 1px solid $accent-900;
 
     &:hover {
-      background: #EFF6E7;
+      background-color: #EFF6E7;
     }
 
     &:focus {
@@ -129,13 +127,13 @@ button {
 }
 
 .title {
-  margin-bottom: 30px;
   font-family: 'Ruda', sans-serif;
   font-size: 32px;
   font-weight: 600;
   color: $dark-900;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  margin-bottom: 28px;
 }
 
 .badge {
@@ -149,7 +147,6 @@ button {
 
   &__label {
     display: block;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 10px;
     line-height: 1;
@@ -180,7 +177,6 @@ button {
 
 .price {
   display: block;
-  font-family: 'Open Sans', sans-serif;
   line-height: 1;
   letter-spacing: 0.03em;
   position: relative;

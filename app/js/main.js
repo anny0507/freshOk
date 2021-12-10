@@ -8,16 +8,18 @@ $(function () {
 
   });
 
-  $('.brend').slick({
+  $('.brend__list').slick({
     arrows: false,
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
-    variableWidth: true
+    /* centerMode: true, */
+    variableWidth: true,
+    
   });
 
-  $('.button__catalog').on('click', function () {
-    $('.button__catalog').toggleClass('active');
+  $('.menu__catalog').on('click', function () {
+    $('.menu__catalog').toggleClass('active');
   })
   
 
