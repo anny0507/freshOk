@@ -114,11 +114,6 @@ button {
     fill: #FFB800;
   }
 
-  &--star {
-    fill: #FFB800;
-    width: 16px;
-    height: 16px;
-  }
 }
 
 .section {
@@ -204,5 +199,10 @@ button {
     font-weight: 600;
     font-size: 20px;
     line-height: 1;
+  }
+
+  &__currency {
+    font-size: 12px;
+    font-weight: 600;
   }
 }
