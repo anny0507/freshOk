@@ -69,7 +69,7 @@ function svgSprites() {
       svgSprite({
         mode: {
           stack: {
-            sprite: '../sprite.svg', // указываем имя файла спрайта и путь
+            sprite: '../sprite.svg'
           },
         },
       })
